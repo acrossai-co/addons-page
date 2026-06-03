@@ -1,0 +1,33 @@
+{
+    "name": "wpboilerplate/addons-page",
+    "description": "Reusable WordPress Add-ons page with free and paid add-ons support via Freemius.",
+    "type": "library",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "php": ">=7.4",
+        "automattic/jetpack-autoloader": "^5.0",
+        "freemius/wordpress-sdk": "^2.0"
+    },
+    "require-dev": {
+        "wp-coding-standards/wpcs": "*",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.2",
+        "szepeviktor/phpstan-wordpress": "^2.0",
+        "phpunit/phpunit": "^9.6",
+        "brain/monkey": "^2.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "WPBoilerplate\\AddonsPage\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "automattic/jetpack-autoloader": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "extra": {
+        "autoloader-suffix": "WPBoilerplate_AddonsPage",
+        "wp-requires": "6.0"
+    }
+}

@@ -1,0 +1,15 @@
+/.git
+/.github
+/.editorconfig
+/.gitattributes
+/.gitignore
+/.nvmrc
+/.distignore
+/node_modules
+/src/assets
+/tests
+/phpcs.xml.dist
+/phpstan.neon.dist
+/webpack.config.js
+/package.json
+/package-lock.json

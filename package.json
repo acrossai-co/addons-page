@@ -1,0 +1,17 @@
+{
+    "name": "@wpboilerplate/addons-page",
+    "version": "1.0.0",
+    "description": "WordPress Add-ons page Composer package",
+    "private": true,
+    "scripts": {
+        "build": "wp-scripts build",
+        "start": "wp-scripts start",
+        "format": "wp-scripts format",
+        "lint:js": "wp-scripts lint-js",
+        "lint:css": "wp-scripts lint-style",
+        "packages-update": "wp-scripts packages-update"
+    },
+    "devDependencies": {
+        "@wordpress/scripts": "^30.0"
+    }
+}

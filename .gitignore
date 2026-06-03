@@ -1,0 +1,9 @@
+/vendor/
+/node_modules/
+.DS_Store
+.phpunit.result.cache
+/phpcs.xml
+/phpstan.neon
+/phpunit.xml
+npm-debug.log
+yarn-error.log

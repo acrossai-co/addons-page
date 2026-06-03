@@ -1,0 +1,15 @@
+parameters:
+    level: 5
+    paths:
+        - src/
+    excludePaths:
+        - vendor/
+        - node_modules/
+        - build/
+    ignoreErrors:
+        - '#Call to an undefined method Freemius::#'
+        - '#Class Freemius not found#'
+        - '#Class FS_Plugin_License not found#'
+        - '#Class FS_Api not found#'
+    bootstrapFiles:
+        - vendor/php-stubs/wordpress-stubs/wordpress-stubs.php
