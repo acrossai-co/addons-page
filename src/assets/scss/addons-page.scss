@@ -181,8 +181,28 @@ $highlight-border: #2271b1;
 	justify-content: center;
 
 	&--active {
-		opacity: 0.7;
+		border-color: #a0aeb8;
+		color: #50575e;
+
+		&:hover {
+			border-color: #d63638;
+			color: #d63638;
+			background: #fff;
+		}
+	}
+
+	&--confirmed {
+		background: #00a32a;
+		border-color: #00a32a;
+		color: #fff;
 		cursor: default;
+		pointer-events: none;
+
+		&:hover {
+			background: #00a32a;
+			border-color: #00a32a;
+			color: #fff;
+		}
 	}
 
 	&:focus-visible {

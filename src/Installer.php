@@ -81,6 +81,25 @@ class Installer {
 		];
 	}
 
+	/**
+	 * Deactivate an active plugin.
+	 *
+	 * @return array{success:bool, message:string}
+	 */
+	public function deactivate( string $plugin_file, string $addon_name ): array {
+		if ( ! function_exists( 'deactivate_plugins' ) ) {
+			require_once ABSPATH . 'wp-admin/includes/plugin.php';
+		}
+
+		deactivate_plugins( $plugin_file );
+
+		return [
+			'success' => true,
+			/* translators: %s: add-on name */
+			'message' => sprintf( __( '%s deactivated.', 'wpb-addons-page' ), esc_html( $addon_name ) ),
+		];
+	}
+
 	// -------------------------------------------------------------------------
 
 	private function load_upgrader_files(): void {

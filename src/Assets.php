@@ -125,8 +125,10 @@ class Assets {
 			'i18n'       => [
 				'installing'    => __( 'Installing…', 'wpb-addons-page' ),
 				'activating'    => __( 'Activating…', 'wpb-addons-page' ),
-				'installed'     => __( 'Installed & Activated', 'wpb-addons-page' ),
-				'activated'     => __( 'Activated', 'wpb-addons-page' ),
+				'deactivating'  => __( 'Deactivating…', 'wpb-addons-page' ),
+				'installed'     => __( '✓ Installed & Activated', 'wpb-addons-page' ),
+				'activated'     => __( '✓ Activated', 'wpb-addons-page' ),
+				'deactivated'   => __( '✓ Deactivated', 'wpb-addons-page' ),
 				'installFailed' => __( 'Could not install. Please try again.', 'wpb-addons-page' ),
 				'active'        => __( '● Active', 'wpb-addons-page' ),
 				'retry'         => __( 'Retry', 'wpb-addons-page' ),

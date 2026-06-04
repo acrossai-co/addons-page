@@ -107,6 +107,7 @@ class AddonsPage {
 		add_action( 'admin_notices', [ $this->notices, 'render' ] );
 		add_action( 'wp_ajax_wpb_addons_install_free', [ $this->ajax, 'install_free' ] );
 		add_action( 'wp_ajax_wpb_addons_activate', [ $this->ajax, 'activate' ] );
+		add_action( 'wp_ajax_wpb_addons_deactivate', [ $this->ajax, 'deactivate' ] );
 		add_action( 'admin_post_wpb_addons_connect_again', [ $this, 'handle_connect_again' ] );
 	}
 

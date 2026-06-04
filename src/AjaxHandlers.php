@@ -77,6 +77,34 @@ class AjaxHandlers {
 		] );
 	}
 
+	/** wp_ajax_wpb_addons_deactivate */
+	public function deactivate(): void {
+		check_ajax_referer( 'wpb_addons_action', 'nonce' );
+
+		if ( ! current_user_can( 'deactivate_plugins' ) ) {
+			wp_send_json_error( [ 'message' => __( 'You do not have permission to deactivate plugins.', 'wpb-addons-page' ), 'code' => 'forbidden' ] );
+		}
+
+		$slug        = isset( $_POST['slug'] ) ? sanitize_key( $_POST['slug'] ) : '';
+		$plugin_file = isset( $_POST['plugin_file'] ) ? sanitize_text_field( wp_unslash( $_POST['plugin_file'] ) ) : '';
+
+		if ( empty( $plugin_file ) || substr_count( $plugin_file, '/' ) !== 1 ) {
+			wp_send_json_error( [ 'message' => __( 'Invalid plugin file.', 'wpb-addons-page' ), 'code' => 'invalid_plugin_file' ] );
+		}
+
+		$addon = AddonsRegistry::find( $slug );
+		if ( null === $addon ) {
+			wp_send_json_error( [ 'message' => __( 'Add-on not found.', 'wpb-addons-page' ), 'code' => 'not_found' ] );
+		}
+
+		$result = $this->installer->deactivate( $plugin_file, $addon['name'] );
+
+		wp_send_json_success( [
+			'message' => $result['message'],
+			'state'   => $this->button_state->for_addon( $addon ),
+		] );
+	}
+
 	/** wp_ajax_wpb_addons_activate */
 	public function activate(): void {
 		check_ajax_referer( 'wpb_addons_action', 'nonce' );

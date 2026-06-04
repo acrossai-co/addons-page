@@ -45,20 +45,21 @@ class ButtonState {
 
 		if ( is_plugin_active( $plugin_file ) ) {
 			return [
-				'label'     => __( '● Active', 'wpb-addons-page' ),
-				'action'    => 'none',
-				'enabled'   => false,
-				'css_class' => 'button-secondary wpb-addons-page__btn--active',
-				'tooltip'   => '',
+				'label'       => __( 'Deactivate', 'wpb-addons-page' ),
+				'action'      => 'deactivate',
+				'enabled'     => true,
+				'css_class'   => 'button-secondary wpb-addons-page__btn--active',
+				'tooltip'     => '',
+				'plugin_file' => $plugin_file,
 			];
 		}
 
 		return [
-			'label'     => __( 'Activate', 'wpb-addons-page' ),
-			'action'    => 'activate',
-			'enabled'   => true,
-			'css_class' => 'button-secondary',
-			'tooltip'   => '',
+			'label'       => __( 'Activate', 'wpb-addons-page' ),
+			'action'      => 'activate',
+			'enabled'     => true,
+			'css_class'   => 'button-secondary',
+			'tooltip'     => '',
 			'plugin_file' => $plugin_file,
 		];
 	}
@@ -71,11 +72,12 @@ class ButtonState {
 		// Active.
 		if ( $plugin_file && is_plugin_active( $plugin_file ) ) {
 			return [
-				'label'     => __( '● Active', 'wpb-addons-page' ),
-				'action'    => 'none',
-				'enabled'   => false,
-				'css_class' => 'button-secondary wpb-addons-page__btn--active',
-				'tooltip'   => '',
+				'label'       => __( 'Deactivate', 'wpb-addons-page' ),
+				'action'      => 'deactivate',
+				'enabled'     => true,
+				'css_class'   => 'button-secondary wpb-addons-page__btn--active',
+				'tooltip'     => '',
+				'plugin_file' => $plugin_file,
 			];
 		}
 
