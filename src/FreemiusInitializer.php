@@ -66,8 +66,9 @@ class FreemiusInitializer {
 			'file'              => $consumer_main_file,
 		) );
 
-		// Suppress the deactivation feedback ("Quick Feedback") survey modal.
-		self::$instance->disable_uninstall_feedback_dialog();
+		// Suppress the deactivation "Quick Feedback" survey modal (Freemius SDK >= 2.3.0).
+		// Filter pattern: fs_{tag}_{slug} — see fs_apply_filter() in fs-core-functions.php.
+		add_filter( 'fs_show_deactivation_feedback_form_' . self::FS_SLUG, '__return_false' );
 
 		// Freemius adds an "Opt In" link in the Plugins page when anonymous_mode is true.
 		// Freemius uses "opt-in-or-opt-out {slug}" as the array KEY (not a CSS class in HTML).
