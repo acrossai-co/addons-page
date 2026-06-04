@@ -9,19 +9,12 @@ namespace WPBoilerplate\AddonsPage;
  * ("WPB Add-ons Page"). This enables automatic shared opt-in across all
  * consumers on the same site — the first consumer to load creates the instance,
  * subsequent consumers receive the memoized instance back.
- *
- * TODO: Before first production release, register a "WPB Add-ons Page" product
- *       at freemius.com and replace the FS_PRODUCT_* constants below with real values.
  */
 class FreemiusInitializer {
 
-	/**
-	 * @TODO Replace with your Freemius dashboard values.
-	 *       Dashboard → Products → <your product> → Settings → API Keys.
-	 */
-	const FS_PRODUCT_ID  = 'REPLACE_WITH_FS_PRODUCT_ID';
+	const FS_PRODUCT_ID  = '31225';
 	const FS_SLUG        = 'wpb-addons-page';
-	const FS_PUBLIC_KEY  = 'REPLACE_WITH_FS_PUBLIC_KEY';
+	const FS_PUBLIC_KEY  = 'pk_2a57beb16d277532f564f3daaf7c6';
 
 	/** @var object|null Memoized Freemius instance. */
 	private static $instance = null;
