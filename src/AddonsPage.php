@@ -64,7 +64,7 @@ class AddonsPage {
 		$this->pending   = new PendingAddon();
 
 		$button_state        = new ButtonState( $this->fs_bridge );
-		$this->renderer      = new PageRenderer( $this->registry, $this->fs_bridge, $button_state, $this->pending );
+		$this->renderer      = new PageRenderer( $this->registry, $this->fs_bridge, $button_state, $this->pending, $this->menu_slug );
 		$this->menu_registrar = new MenuRegistrar( $this->menu_slug, $this->renderer );
 
 		$package_dir = dirname( __DIR__ );

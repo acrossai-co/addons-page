@@ -19,6 +19,9 @@ class PageRenderer {
 	/** @var PendingAddon */
 	private $pending;
 
+	/** @var string */
+	private $menu_slug;
+
 	/** @var string Absolute path to the Views directory. */
 	private $views_path;
 
@@ -26,12 +29,14 @@ class PageRenderer {
 		AddonsRegistry $registry,
 		FreemiusBridge $fs_bridge,
 		ButtonState $button_state,
-		PendingAddon $pending
+		PendingAddon $pending,
+		string $menu_slug = ''
 	) {
 		$this->registry     = $registry;
 		$this->fs_bridge    = $fs_bridge;
 		$this->button_state = $button_state;
 		$this->pending      = $pending;
+		$this->menu_slug    = $menu_slug;
 		$this->views_path   = dirname( __DIR__ ) . '/src/Views';
 	}
 
@@ -54,6 +59,7 @@ class PageRenderer {
 			'banner_visible' => $banner_visible,
 			'pending_slug'   => $pending_slug,
 			'renderer'       => $this,
+			'menu_slug'      => $this->menu_slug,
 		] );
 	}
 
