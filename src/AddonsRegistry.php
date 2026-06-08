@@ -102,6 +102,18 @@ class AddonsRegistry {
 				'source'      => 'wordpress.org',
 			),
 
+			// ---- AcrossAI Core Abilities ----------------------------------------
+			array(
+				'slug'         => 'acrossai-core-abilities',
+				'name'         => 'AcrossAI Core Abilities',
+				'description'  => 'Register, manage, and expose site capabilities to AI agents and clients via the standard WordPress Abilities API.',
+				'icon'         => '',
+				'more_url'     => 'https://github.com/acrossai-co/acrossai-core-abilities/releases',
+				'type'         => 'free',
+				'source'       => 'github',
+				'download_url' => 'https://github.com/acrossai-co/acrossai-core-abilities/releases/latest/download/acrossai-core-abilities.zip',
+			),
+
 		);
 	}
 }
