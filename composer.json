@@ -1,7 +1,6 @@
 {
     "name": "acrossai-co/addons-page",
     "description": "Reusable WordPress Add-ons page with free and paid add-ons support via Freemius.",
-    "version": "0.0.17",
     "type": "library",
     "license": "GPL-2.0-or-later",
     "require": {
