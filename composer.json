@@ -5,7 +5,7 @@
     "type": "library",
     "license": "GPL-2.0-or-later",
     "require": {
-        "php": ">=7.4",
+        "php": ">=8.1",
         "automattic/jetpack-autoloader": "^5.0",
         "freemius/wordpress-sdk": "^2.0"
     },
